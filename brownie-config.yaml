@@ -1,0 +1,24 @@
+dot-env: .env
+
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+
+compiler:
+  solc:
+    remappings:
+    - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+
+wallets: 
+  from_key: 0xafb60d4e0285047f2fe2bd10854296d79b6881e7b30018cb77d8b2afaaa8d610
+
+networks:
+    rinkeby:
+        ETH_USD: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+        verify: True
+    mainnet-fork-dev:
+        ETH_USD: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+        verify: False        
+    development:
+        verify: False
+    ganache-fh:
+        verify: False
